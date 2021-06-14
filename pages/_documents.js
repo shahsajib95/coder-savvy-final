@@ -15,6 +15,7 @@ class MyDocument extends Document {
           property="og:description"
           content='#1 Blog flatform about coding'
         />
+        <link rel="shortcut icon" href="/favicon.ico" />
         </Head>
         <body>
           <Main />
