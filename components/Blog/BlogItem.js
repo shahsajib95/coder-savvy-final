@@ -12,7 +12,7 @@ import {
 const BlogItem = ({ item }) => {
   return (
     <>
-      <Col sm={{ size: 4 }}>
+      <Col md="4" sm="6">
         <Card className="m-2 text-center">
           <div className="blog_card"></div>
           <CardImg
@@ -29,7 +29,7 @@ const BlogItem = ({ item }) => {
               {item.body.substring(0, 100)}
             </CardText>
             <div className="text-center">
-              <Link href={"/blog/" + item.id}>
+              <Link href={"/blog/" + item.id + '/' + item.title}>
                 <a>
                   <Button className="btn-show">See More</Button>
                 </a>

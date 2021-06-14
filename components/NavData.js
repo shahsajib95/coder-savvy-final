@@ -34,18 +34,23 @@ const NavData = () => {
       <Navbar light expand="md" className="p-2">
         <div className="container">
           <NavbarBrand href="/">
-            <img src="/codersavvy.png" width="50" alt="CoderSavvy" />
+            <img src="/codersavvy.png" width="50" alt="CoderSavvy"/>
             <strong>CoderSavvy</strong>
           </NavbarBrand>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
             <Nav className="ms-auto" navbar>
               <NavItem>
-                <NavLink href="/components/">Home</NavLink>
+                <NavLink href="/">Home</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">
+                <NavLink href="/blog">
                   Blog
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/about">
+                  About
                 </NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
