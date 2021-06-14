@@ -1,12 +1,20 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
-import Meta from "../components/Meta";
 
 class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
         <Head>
-          <Meta />
+        <title>CoderSavvy</title>
+        <meta
+          name="description"
+          content='#1 Blog flatform about coding'
+        />
+        <meta property="og:title" content="CoderSavvy" />
+        <meta
+          property="og:description"
+          content='#1 Blog flatform about coding'
+        />
         </Head>
         <body>
           <Main />
