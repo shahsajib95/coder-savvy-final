@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Filter from "../components/Blog/Filter";
 import BlogItem from "../components/Blog/BlogItem";
+import Meta from "../components/Meta";
 import { Row } from "reactstrap";
 import blogs from "../utils/DB";
 import { getAllBlogs } from "../store/blog/action";
@@ -28,6 +29,7 @@ const index = () => {
         />
       </Head>
       <div>
+        <Meta title={data.blogs[0] && data.blogs[0].title} body={data.blogs[0] && data.blogs[0].body}/>
         <Filter />
         <Row>
           {data.blogs.map((item) => (
