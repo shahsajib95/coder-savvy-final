@@ -34,7 +34,7 @@ const NavData = () => {
       <Navbar light expand="md" className="p-2">
         <div className="container">
           <NavbarBrand href="/">
-            <img src="codersavvy.png" width="50" alt="CoderSavvy" />{" "}
+            <img src="/codersavvy.png" width="50" alt="CoderSavvy" />
             <strong>CoderSavvy</strong>
           </NavbarBrand>
           <NavbarToggler onClick={toggle} />

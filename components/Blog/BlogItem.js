@@ -15,20 +15,25 @@ const BlogItem = ({ item }) => {
       <Col sm={{ size: 4 }}>
         <Card className="m-2 text-center">
           <div className="blog_card"></div>
-          <CardImg top width="100%" src={"download.jpeg"} alt="Card image cap" />
+          <CardImg
+            top
+            width="100%"
+            src={"download.jpeg"}
+            alt="Card image cap"
+          />
           <CardBody>
-            <Link href="/">
-              <a>
-                <CardTitle tag="h5" className="card_title">
-                  {item.title.substring(0, 60)}...
-                </CardTitle>
-              </a>
-            </Link>
+            <CardTitle tag="h5" className="card_title">
+              {item.title.substring(0, 60)}...
+            </CardTitle>
             <CardText className="card_description">
               {item.body.substring(0, 100)}
             </CardText>
             <div className="text-center">
-              <Button className="btn-show">See More</Button>
+              <Link href={"/blog/" + item.id}>
+                <a>
+                  <Button className="btn-show">See More</Button>
+                </a>
+              </Link>
             </div>
           </CardBody>
         </Card>
