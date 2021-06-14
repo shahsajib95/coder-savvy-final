@@ -6,8 +6,9 @@ import blogs from "../utils/DB";
 import { getAllBlogs } from "../store/blog/action";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
+import { getData } from "../utils/api-client";
 
-const index = () => {
+const index = (props) => {
   const data = useSelector((state) => state.blogs);
   const dispatch = useDispatch();
   useEffect(() => {
@@ -16,7 +17,10 @@ const index = () => {
   return (
     <div>
       <div>
-        <Meta title={data.blogs[0] && data.blogs[0].title} body={data.blogs[0] && data.blogs[0].body}/>
+        <Meta
+          title={data.blogs[0] && data.blogs[0].title}
+          body={data.blogs[0] && data.blogs[0].body}
+        />
         <Filter />
         <Row>
           {data.blogs.map((item) => (
