@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Filter from "../components/Blog/Filter";
 import BlogItem from "../components/Blog/BlogItem";
 import Meta from "../components/Meta";
@@ -16,18 +15,6 @@ const index = () => {
   }, []);
   return (
     <div>
-      <Head>
-        <title>{data.blogs[0] && data.blogs[0].title}</title>
-        <meta
-          name="description"
-          content={data.blogs[0] && data.blogs[0].body}
-        />
-        <meta property="og:title" content={data.blogs[0] && data.blogs[0].title} />
-        <meta
-          property="og:description"
-          content={data.blogs[0] && data.blogs[0].body}
-        />
-      </Head>
       <div>
         <Meta title={data.blogs[0] && data.blogs[0].title} body={data.blogs[0] && data.blogs[0].body}/>
         <Filter />
