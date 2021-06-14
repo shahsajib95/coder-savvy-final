@@ -9,6 +9,15 @@ const BlogDetails = (props) => {
     <div id="width" className="my-5">
       <Head>
         <title>{title}</title>
+        <meta
+          name="description"
+          content={body}
+        />
+        <meta property="og:title" content={title} />
+        <meta
+          property="og:description"
+          content={body}
+        />
       </Head>
       <div className="text-center p-5">
         <Image
