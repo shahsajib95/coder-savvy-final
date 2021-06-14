@@ -1,16 +1,84 @@
+/* Google Font CDN Link */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css");
+@import url("https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap');
+
+
+
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  font-family: -apple-system, 'Nunito', sans-serif;
+  font-weight: 200;
 }
-
-a {
-  color: inherit;
+a{
   text-decoration: none;
+  color: inherit;
+}
+a:hover{
+  text-decoration: none;
+  color: inherit;
+}
+h1{
+  letter-spacing: 1.42 px;
+}
+.lh{
+  line-height: 27px;
+}
+.ls{
+  letter-spacing: 0.6px;
 }
 
-* {
-  box-sizing: border-box;
+.navbar{
+  box-shadow: 5px 5px 5px #f1f1f1;
+}
+.nav-item{
+  padding: 0 50px 0 0;
+}
+.btn-serach{
+  background-image: linear-gradient(#A68FE8, #5031A9);
+  border: none;
+  color: white;
+}
+
+.form-control{
+  border: none;
+}
+.form-control:focus {
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.blog_card{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgb(204, 204, 204);
+  line-height: 27px;
+  font-size: 14px;
+  letter-spacing: 0.6 px;
+  color: #fff;
+  padding: 5px;
+}
+.card_title{
+  line-height: 26px;
+  font-size: 18px;
+  letter-spacing: 0.68 px;
+}
+.card_description{
+  line-height: 27px;
+  font-size: 17px;
+  letter-spacing: 0.6 px;
+  color: #77838F
+}
+.btn-show{
+  padding: 12px 30px;
+  background-color: #5031A9;
+}
+.btn-show:hover{
+  padding: 12px 30px;
+  background-color: #ffff;
+  color: #5031A9;
 }
