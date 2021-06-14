@@ -1,14 +1,13 @@
+import Head from "next/head";
 import Filter from "../components/Blog/Filter";
 import BlogItem from "../components/Blog/BlogItem";
-import Meta from "../components/Meta";
 import { Row } from "reactstrap";
 import blogs from "../utils/DB";
 import { getAllBlogs } from "../store/blog/action";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { getData } from "../utils/api-client";
 
-const index = (props) => {
+const index = () => {
   const data = useSelector((state) => state.blogs);
   const dispatch = useDispatch();
   useEffect(() => {
@@ -16,11 +15,19 @@ const index = (props) => {
   }, []);
   return (
     <div>
-      <div>
-        <Meta
-          title={data.blogs[0] && data.blogs[0].title}
-          body={data.blogs[0] && data.blogs[0].body}
+      <Head>
+        <title>CoderSavvy</title>
+        <meta
+          name="description"
+          content='#1 Blog flatform about coding'
         />
+        <meta property="og:title" content="CoderSavvy" />
+        <meta
+          property="og:description"
+          content='#1 Blog flatform about coding'
+        />
+      </Head>
+      <div>
         <Filter />
         <Row>
           {data.blogs.map((item) => (
